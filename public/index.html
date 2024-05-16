@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+    <title>Budget Tracker</title>
+</head>
+<body class=" font-google min-h--100vh justify-center flex items-center bg-gray-100 p-6">
+   <div class="wrapper w-[700px]">
+    <div class="container grid grid-cols-2 gap-[6.3em] ">
+        <!-- Budget -->
+        <div class="sub-container w-[300px] bg-white p-3">
+            <h3 class=" text-2xl font-bold pb-2">Budget</h3>
+            <p class="hide-error pb-2 hidden text-red-700" id="budget-error">
+                Value cannot be empty or negative
+            </p>
+            <div class=" flex flex-col items-start">
+            <input type="number" placeholder="Enter total amount"id="total-amount" class=" border-black border p-2 mb-3">
+            <button class="submit bg-blue-500 text-white p-3 rounded-sm" id="total-amount-button">
+                Set Budget
+            </button>
+        </div>
+
+        </div>
+
+        <!-- Expenditures -->
+        <div class="user-amount-container w-[300px] bg-white p-3">
+            <h3 class=" text-2xl font-bold pb-2">Expenses</h3>
+            <p class="hide-error pb-2 hidden text-red-700" id="product-title">
+                Values cannot be empty</p>
+                <div class=" flex flex-col items-start">
+                <input type="text" class="product-title  border-black border p-2 mb-2" id="product-title" placeholder=" Enter title of product">
+                <input type="number" placeholder="Enter cost of product" id="user-amount" class="  border-black border p-2 mb-2">
+                <button class=" submit  bg-blue-500 text-white p-3 rounded-sm" id="check-amount">Check Amount</button>
+            </div>
+        </div>
+    </div>
+    <!-- Output -->
+    <div class="output-container flex bg-blue-500 justify-between text-white py-2 px-2 my-6 rounded-md">
+        <div class=" flex flex-col items-center">
+            <p class=" pb-2">Total Budget</p>
+            <span id="amount">0</span>
+        </div>
+        <div class="flex flex-col items-center">
+        <p class=" pb-2">Expenses</p>
+        <span id="expenditure-value">0</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <p class=" pb-2">Balance</p>
+        <span id="balance-amount">0</span>
+    </div>
+    </div>
+  
+   <!-- List -->
+   <div class="list bg-white px-2 py-4 rounded-md">
+    <h3>Expense List</h3>
+    <div class="list-container" id="list"></div>
+
+   </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
