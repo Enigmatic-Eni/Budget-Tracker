@@ -7,6 +7,7 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Budget Tracker</title>
 </head>
 <body class=" font-google min-h--100vh justify-center flex items-center bg-gray-100 p-6">
@@ -20,7 +21,7 @@
             </p>
             <div class=" flex flex-col items-start">
             <input type="number" placeholder="Enter total amount"id="total-amount" class=" border-black border p-2 mb-3">
-            <button class="submit bg-blue-500 text-white p-3 rounded-sm" id="total-amount-button">
+            <button class="submit bg-green-600 text-white p-3 rounded-sm" id="total-amount-button">
                 Set Budget
             </button>
         </div>
@@ -30,17 +31,17 @@
         <!-- Expenditures -->
         <div class="user-amount-container w-[300px] bg-white p-3">
             <h3 class=" text-2xl font-bold pb-2">Expenses</h3>
-            <p class="hide-error pb-2 hidden text-red-700" id="product-title">
+            <p class="hide-error pb-2 hidden text-red-700" id="product-title-error">
                 Values cannot be empty</p>
                 <div class=" flex flex-col items-start">
                 <input type="text" class="product-title  border-black border p-2 mb-2" id="product-title" placeholder=" Enter title of product">
                 <input type="number" placeholder="Enter cost of product" id="user-amount" class="  border-black border p-2 mb-2">
-                <button class=" submit  bg-blue-500 text-white p-3 rounded-sm" id="check-amount">Check Amount</button>
+                <button class=" submit  bg-green-600 text-white p-3 rounded-sm" id="check-amount">Check Amount</button>
             </div>
         </div>
     </div>
     <!-- Output -->
-    <div class="output-container flex bg-blue-500 justify-between text-white py-2 px-2 my-6 rounded-md">
+    <div class="output-container flex bg-green-600 justify-between text-white py-2 px-2 my-6 rounded-md">
         <div class=" flex flex-col items-center">
             <p class=" pb-2">Total Budget</p>
             <span id="amount">0</span>
