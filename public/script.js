@@ -56,19 +56,24 @@ const modifyElement = (element, edit = false) => {
 // Function to create list
 const listCreator = (expenseName, expenseValue) => {
     let sublistContent = document.createElement("div");
-    sublistContent.classList.add("sublist-content", "flex-space");
+    sublistContent.classList.add("sublist-content", "flex");
+    sublistContent.style.justifyContent = "space-between";
+    sublistContent.style.paddingBottom = "10px"
     list.appendChild(sublistContent);
     sublistContent.innerHTML = `<p class = "product">${expenseName}</p> <p class = "amount">${expenseValue}</p>`;
     let editButton = document.createElement("button")
     editButton.classList.add("fa-regular", "fa-pen-to-square", "edit");
-    editButton.style.fontSize = "24px";
+    editButton.style.fontSize = "18px";
+    
+    editButton.style.color = "rgb(22 163 74 / var(--tw-bg-opacity))"
     editButton.addEventListener("click", () => {
         modifyElement(editButton, true);
     });
 
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("fa-solid", "fa-trash-can", "delete");
-    deleteButton.style.fontSize = "24px";
+    deleteButton.style.fontSize = "18px";
+    deleteButton.style.color = "rgb(22 163 74 / var(--tw-bg-opacity))"
     deleteButton.addEventListener("click", () => {
         modifyElement(deleteButton);
     });
@@ -93,7 +98,7 @@ checkAmountButton.addEventListener("click", () => {
     const totalBalance = tempAmount - sum;
     balanceValue. innerText = totalBalance;
 
-    listCreator(productTitle/value, userAmount.value);
+    listCreator(productTitle.value, userAmount.value);
 
     productTitle.value = "";
     userAmount.value = "";
