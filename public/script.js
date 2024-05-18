@@ -25,7 +25,7 @@ errorMessage.classList.remove("hidden")
         amount.innerHTML = tempAmount;
         // Set Balance 
         balanceValue.innerHTML = tempAmount - expenditureValue.innerText;
-// To clear the input field
+// To clear the input field.
         totalAmount.value = "";
     }
 });
