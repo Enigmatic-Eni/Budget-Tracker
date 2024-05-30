@@ -11,10 +11,10 @@
     <title>Budget Tracker</title>
 </head>
 <body class=" font-google min-h--100vh justify-center flex items-center bg-gray-100 p-6">
-   <div class="wrapper w-[700px]">
-    <div class="container grid grid-cols-2 gap-[6.3em] ">
+   <div class="wrapper sm:w-[700px] ">
+    <div class="container grid sm:grid-cols-2 md:gap-[6.3em] gap-[2em] ">
         <!-- Budget -->
-        <div class="sub-container w-[300px] bg-white p-3">
+        <div class="sub-container sm:w-[300px bg-white p-3">
             <h3 class=" text-2xl font-bold pb-2">Budget</h3>
             <p class="hide-error pb-2 hidden text-red-700" id="budget-error">
                 Value cannot be empty or negative
@@ -41,7 +41,7 @@
         </div>
     </div>  
     <!-- Output. -->
-    <div class="output-container flex bg-green-600 justify-between text-white py-2 px-2 my-6 rounded-md">
+    <div class="output-container flex sm:flex-row flex-col bg-green-600 justify-between sm:gap-0 gap-6 text-white py-2 px-2 my-6 rounded-md">
         <div class=" flex flex-col items-center">
             <p class=" pb-2">Total Budget</p>
             <span id="amount">0</span>
